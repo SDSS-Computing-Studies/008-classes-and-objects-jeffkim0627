@@ -36,12 +36,14 @@ class student:
         pass
 
     def average(self):
-        if 
+        totSum = float(list.append(st1.getGrades))
+        average = totSum/7
         pass
 
 
     def commands(self):
         print("-----------------------")
+        
         print("")
 
 def main():
@@ -55,8 +57,6 @@ def main():
     st2 = student("Joe Lunchbox","12346", 11)
     st1.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
     st1.getGrades( [71, 98, 93, 95, 68, 81, 71])
-
-
 
 
 main()
