@@ -27,13 +27,22 @@ class student:
     # properties should be listed first
 
     def __init__(): # You will need to create your own input parameters for all methods
+        self.StuNum = StuNum
+        self.Courses = Courses
+        self.Grades = Grades
         pass
 
     def __del__():
         pass
 
     def average(self):
+        if 
         pass
+
+
+    def commands(self):
+        print("-----------------------")
+        print("")
 
 def main():
     # This contains test data that will be used by the autograder.
