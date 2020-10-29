@@ -25,26 +25,71 @@ constructor     - should require the student name, studentNumber and grade (in t
 class student:
 
     # properties should be listed first
+    # You will need to create your own input parameters for all methods
 
-    def __init__(): # You will need to create your own input parameters for all methods
+    name = ""
+    StuNum = ""
+    grade = ""
+
+    def __init__(self, name, StuNum, grade): 
+        self.name = name
         self.StuNum = StuNum
-        self.Courses = Courses
-        self.Grades = Grades
+        self.grade = grade
+        print("student name: " + self.name)
         pass
 
-    def __del__():
-        pass
+
+    
+
+    def commands(self):
+        print("-----------------------")
+        print("What do you want to get")
+        print("1. Find out your average of all courses.")
+        print("2. Check to see if you are on the honmor roll.")
+        print("3. Show courses.")
+        print("4. ")
+        print("5. ")
+        print("6. ")
+        command = input("Choose a number[1-6]:")
+        print("")
+        return int(command)
+
+    def leadingFunc(self, command):
+        if command == 1:
+            self.average()
+        elif command == 2:
+            self.getHonorRoll()
+        elif command == 3:
+            self.showCourses()
+        elif command == 4:
+            self.showGrade(int)
+        elif command == 5:
+            self.getCourses(list)
+        elif command == 6:
+            self.getGrades(list)
 
     def average(self):
         totSum = float(list.append(st1.getGrades))
         average = totSum/7
+        print("Your average grade af all course is " + average)
+        
+    def getHonorRoll():
         pass
 
+    def showCourses():
+        print(st1.getCourses)
 
-    def commands(self):
-        print("-----------------------")
-        
+    def showGrade(int):
+        print(st1.getGrades)
+
+    def getCourses(list):
         print("")
+
+    def getGrades(list):
+        pass
+
+    def __del__():
+        pass
 
 def main():
     # This contains test data that will be used by the autograder.
@@ -57,6 +102,5 @@ def main():
     st2 = student("Joe Lunchbox","12346", 11)
     st1.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
     st1.getGrades( [71, 98, 93, 95, 68, 81, 71])
-
-
+ 
 main()
