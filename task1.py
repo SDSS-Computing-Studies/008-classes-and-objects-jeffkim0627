@@ -74,7 +74,9 @@ class student:
         print("Your average grade af all course is " + average)
         
     def getHonorRoll():
-        pass
+        sort(st1.getGrades())
+        GetHonor = (st1.getGrades(3) + st1.getGrades(4) + st1.getGrades(5) + st1.getGrades(6) + st1.getGrades(7))/5
+        print(GetHonor)
 
     def showCourses():
         print(st1.getCourses)
