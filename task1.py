@@ -58,27 +58,27 @@ class student:
     def showGrades(self,ind):
         stclasses = self.courses[ind]
         marks = self.grades[ind]
-        response = print(self.name+" has achieved a grade of "+marks+"%"+" in "+stclasses+".")
+        response = print(self.name + " has achieved a grade of "+marks+"%" + " in "+stclasses+".")
     def __del__(self):
-        print("Thank you for viewing the information of "+self.name)
+        print("Thank you for viewing the information of " + self.name)
 
     def average(self):
         a = len(self.grades)
-        b=sum(self.grades)
+        b = sum(self.grades)
         average=b/a
         return average
     def getHonorRoll(self):
         stgrades=self.grades
         stgrades.sort(reverse=True)
-        a=len(stgrades)
-        if a>= 5:
-            average=(stgrades[0]+stgrades[1]+stgrades[2]+stgrades[3]+stgrades[4])/5
-            if average>=86:
+        a = len(stgrades)
+        if a >= 5:
+            average = (stgrades[0]+stgrades[1]+stgrades[2]+stgrades[3]+stgrades[4])/5
+            if average >= 86:
                 return True
             else:
                 return False
         else:
-            print(self.name+" does not have enough courses")
+            print(self.name + " does not have enough courses")
             
 def main():
     st1 = student("Anita Bath","91334",11)
