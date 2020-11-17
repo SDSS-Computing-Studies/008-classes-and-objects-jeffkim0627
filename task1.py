@@ -31,13 +31,14 @@ class student:
     
 
     def __init__(self,name,studentnum,grade):
-        self.name =name
-        self.studentnum =studentnum
-        self.grade =grade
+        self.name = name
+        self.grade = grade
+        self.studentnum = studentnum
+        
         
 
     def getCourses(self,courses):
-        self.courses=courses
+        self.courses = courses
         
     def getGrades(self,grade1=0,grade2=0,grade3=0,grade4=0,grade5=0,grade6=0,grade7=0):
         gradelist =[]
@@ -51,18 +52,18 @@ class student:
         self.grades = gradelist
 
     def showCourse(self):
-        a=print(self.courses)
+        a = print(self.courses)
         return a
 
     def showGrades(self,ind):
-        stclasses=self.courses[ind]
-        marks=self.grades[ind]
-        response=print(self.name+" has achieved a grade of "+marks+"%"+" in "+stclasses+".")
+        stclasses = self.courses[ind]
+        marks = self.grades[ind]
+        response = print(self.name+" has achieved a grade of "+marks+"%"+" in "+stclasses+".")
     def __del__(self):
         print("Thank you for viewing the information of "+self.name)
 
     def average(self):
-        a=len(self.grades)
+        a = len(self.grades)
         b=sum(self.grades)
         average=b/a
         return average
