@@ -23,86 +23,67 @@ constructor     - should require the student name, studentNumber and grade (in t
 """
 
 class student:
-
-    # properties should be listed first
-    # You will need to create your own input parameters for all methods
-
     name = ""
-    StuNum = ""
-    grade = ""
-
-    def __init__(self, name, StuNum, grade): 
-        self.name = name
-        self.StuNum = StuNum
-        self.grade = grade
-        print("student name: " + self.name)
-        pass
-
-
+    grade = int()
+    studentnum =""
+    grades =[]
+    courses =[]
     
 
-    def commands(self):
-        print("-----------------------")
-        print("What do you want to get")
-        print("1. Find out your average of all courses.")
-        print("2. Check to see if you are on the honmor roll.")
-        print("3. Show courses.")
-        print("4. ")
-        print("5. ")
-        print("6. ")
-        command = input("Choose a number[1-6]:")
-        print("")
-        return int(command)
+    def __init__(self,name,studentnum,grade):
+        self.name =name
+        self.studentnum =studentnum
+        self.grade =grade
+        
 
-    def leadingFunc(self, command):
-        if command == 1:
-            self.average()
-        elif command == 2:
-            self.getHonorRoll()
-        elif command == 3:
-            self.showCourses()
-        elif command == 4:
-            self.showGrade(int)
-        elif command == 5:
-            self.getCourses(list)
-        elif command == 6:
-            self.getGrades(list)
+    def getCourses(self,courses):
+        self.courses=courses
+        
+    def getGrades(self,grade1=0,grade2=0,grade3=0,grade4=0,grade5=0,grade6=0,grade7=0):
+        gradelist =[]
+        gradelist.insert(0,grade1)
+        gradelist.insert(1,grade2)
+        gradelist.insert(2,grade3)
+        gradelist.insert(3,grade4)
+        gradelist.insert(4,grade5)
+        gradelist.insert(5,grade6)
+        gradelist.insert(6,grade7)
+        self.grades = gradelist
+
+    def showCourse(self):
+        a=print(self.courses)
+        return a
+
+    def showGrades(self,ind):
+        stclasses=self.courses[ind]
+        marks=self.grades[ind]
+        response=print(self.name+" has achieved a grade of "+marks+"%"+" in "+stclasses+".")
+    def __del__(self):
+        print("Thank you for viewing the information of "+self.name)
 
     def average(self):
-        totSum = float(list.append(st1.getGrades))
-        average = totSum/7
-        print("Your average grade af all course is " + average)
-        
-    def getHonorRoll():
-        sort(st1.getGrades
-        GetHonor = (st1.getGrades(3) + st1.getGrades(4) + st1.getGrades(5) + st1.getGrades(6) + st1.getGrades(7))/5
-        print(GetHonor)
-
-    def showCourses():
-        print(st1.getCourses)
-
-    def showGrade(int):
-        print(st1.getGrades)
-
-    def getCourses(list):
-        print("")
-
-    def getGrades(list):
-        pass
-
-    def __del__():
-        pass
-
+        a=len(self.grades)
+        b=sum(self.grades)
+        average=b/a
+        return average
+    def getHonorRoll(self):
+        stgrades=self.grades
+        stgrades.sort(reverse=True)
+        a=len(stgrades)
+        if a>= 5:
+            average=(stgrades[0]+stgrades[1]+stgrades[2]+stgrades[3]+stgrades[4])/5
+            if average>=86:
+                return True
+            else:
+                return False
+        else:
+            print(self.name+" does not have enough courses")
+            
 def main():
-    # This contains test data that will be used by the autograder.
-    # do not modify this function
-
     st1 = student("Anita Bath","91334",11)
     st1.getCourses( ["English","Math","PE","Computers","History","Biology","Japanese"] )
     st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
-
+    st1.average
     st2 = student("Joe Lunchbox","12346", 11)
     st1.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
     st1.getGrades( [71, 98, 93, 95, 68, 81, 71])
- 
-main()
